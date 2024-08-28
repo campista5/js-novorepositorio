@@ -1,43 +1,18 @@
-
-let palavra;
-
 function setup() {
-  createCanvas(400, 400);
-
-  palavra = palavraAleatoria();
+  createCanvas(600, 600);
+   background("white");
 }
 
-function palavraAleatoria(){
-  let palavras = ["Artista", "Obra", "Talento" ,"Criação"];
-  return random(palavras);
-}
-
-function inicializaCores() {
-
-  background("rgb(6,82,6)");
-  fill("black");
-  textSize(64);
-  textAlign(CENTER, CENTER);
-}
-
-function palavraParcial(minimo, maximo) {
-  let quantidade = map(mouseX, minimo, maximo, 1, palavra.length);
-  let parcial = palavra.substring(0, quantidade);
-  return parcial;
-}
 
 function draw() {
-
-  inicializaCores();
-
-  let texto = palavraParcial(0, width);
-  text(texto, 200, 200); 
   
-}
-
-function filmesParaAssistir(diaDaSemana, genero) {
-
-  // ...
-
-  return sugestaoFilme;
+  stroke ("blue");
+  fill ("red");
+ 
+  
+  // console.log(mouseIsPressed);
+  
+  if (mouseIsPressed){
+    rect(mouseX, mouseY, 20, 35);
+  }
 }
